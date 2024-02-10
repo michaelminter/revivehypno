@@ -1,0 +1,205 @@
+$flaticon_yogacare-font: "flaticon_yogacare";
+
+@font-face {
+    font-family: $flaticon_yogacare-font;
+    src: url("./flaticon_yogacare.ttf?16dfd923eb6f55f29fa5f2857a0eeceb") format("truetype"),
+url("./flaticon_yogacare.woff?16dfd923eb6f55f29fa5f2857a0eeceb") format("woff"),
+url("./flaticon_yogacare.woff2?16dfd923eb6f55f29fa5f2857a0eeceb") format("woff2"),
+url("./flaticon_yogacare.eot?16dfd923eb6f55f29fa5f2857a0eeceb#iefix") format("embedded-opentype"),
+url("./flaticon_yogacare.svg?16dfd923eb6f55f29fa5f2857a0eeceb#flaticon_yogacare") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_yogacare !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_yogacare-map: (
+    "verify": "\f101",
+    "telephone": "\f102",
+    "mail": "\f103",
+    "video-camera": "\f104",
+    "sleeping": "\f105",
+    "muscle-man": "\f106",
+    "yoga": "\f107",
+    "six-pack": "\f108",
+    "left-quote": "\f109",
+    "right-quote": "\f10a",
+    "sent": "\f10b",
+    "nutrition": "\f10c",
+    "healthy-food": "\f10d",
+    "salad": "\f10e",
+    "nutrition-1": "\f10f",
+    "nutrition-2": "\f110",
+    "diet": "\f111",
+    "review": "\f112",
+    "report": "\f113",
+    "customer-service": "\f114",
+    "customer-service-1": "\f115",
+    "people": "\f116",
+    "search": "\f117",
+    "view": "\f118",
+    "maple-leaf": "\f119",
+    "idea": "\f11a",
+    "power": "\f11b",
+    "settings": "\f11c",
+    "gift": "\f11d",
+    "problem-solving": "\f11e",
+    "support": "\f11f",
+    "badge": "\f120",
+    "rating": "\f121",
+    "trophy": "\f122",
+    "close": "\f123",
+    "lotus": "\f124",
+    "exercise": "\f125",
+    "placeholder": "\f126",
+    "yoga-mat": "\f127",
+    "meditation": "\f128",
+    "fitness": "\f129",
+    "play-button": "\f12a",
+    "calendar": "\f12b",
+    "clock-circular-outline": "\f12c",
+    "pin": "\f12d",
+);
+
+.flaticon-verify:before {
+    content: map-get($flaticon_yogacare-map, "verify");
+}
+.flaticon-telephone:before {
+    content: map-get($flaticon_yogacare-map, "telephone");
+}
+.flaticon-mail:before {
+    content: map-get($flaticon_yogacare-map, "mail");
+}
+.flaticon-video-camera:before {
+    content: map-get($flaticon_yogacare-map, "video-camera");
+}
+.flaticon-sleeping:before {
+    content: map-get($flaticon_yogacare-map, "sleeping");
+}
+.flaticon-muscle-man:before {
+    content: map-get($flaticon_yogacare-map, "muscle-man");
+}
+.flaticon-yoga:before {
+    content: map-get($flaticon_yogacare-map, "yoga");
+}
+.flaticon-six-pack:before {
+    content: map-get($flaticon_yogacare-map, "six-pack");
+}
+.flaticon-left-quote:before {
+    content: map-get($flaticon_yogacare-map, "left-quote");
+}
+.flaticon-right-quote:before {
+    content: map-get($flaticon_yogacare-map, "right-quote");
+}
+.flaticon-sent:before {
+    content: map-get($flaticon_yogacare-map, "sent");
+}
+.flaticon-nutrition:before {
+    content: map-get($flaticon_yogacare-map, "nutrition");
+}
+.flaticon-healthy-food:before {
+    content: map-get($flaticon_yogacare-map, "healthy-food");
+}
+.flaticon-salad:before {
+    content: map-get($flaticon_yogacare-map, "salad");
+}
+.flaticon-nutrition-1:before {
+    content: map-get($flaticon_yogacare-map, "nutrition-1");
+}
+.flaticon-nutrition-2:before {
+    content: map-get($flaticon_yogacare-map, "nutrition-2");
+}
+.flaticon-diet:before {
+    content: map-get($flaticon_yogacare-map, "diet");
+}
+.flaticon-review:before {
+    content: map-get($flaticon_yogacare-map, "review");
+}
+.flaticon-report:before {
+    content: map-get($flaticon_yogacare-map, "report");
+}
+.flaticon-customer-service:before {
+    content: map-get($flaticon_yogacare-map, "customer-service");
+}
+.flaticon-customer-service-1:before {
+    content: map-get($flaticon_yogacare-map, "customer-service-1");
+}
+.flaticon-people:before {
+    content: map-get($flaticon_yogacare-map, "people");
+}
+.flaticon-search:before {
+    content: map-get($flaticon_yogacare-map, "search");
+}
+.flaticon-view:before {
+    content: map-get($flaticon_yogacare-map, "view");
+}
+.flaticon-maple-leaf:before {
+    content: map-get($flaticon_yogacare-map, "maple-leaf");
+}
+.flaticon-idea:before {
+    content: map-get($flaticon_yogacare-map, "idea");
+}
+.flaticon-power:before {
+    content: map-get($flaticon_yogacare-map, "power");
+}
+.flaticon-settings:before {
+    content: map-get($flaticon_yogacare-map, "settings");
+}
+.flaticon-gift:before {
+    content: map-get($flaticon_yogacare-map, "gift");
+}
+.flaticon-problem-solving:before {
+    content: map-get($flaticon_yogacare-map, "problem-solving");
+}
+.flaticon-support:before {
+    content: map-get($flaticon_yogacare-map, "support");
+}
+.flaticon-badge:before {
+    content: map-get($flaticon_yogacare-map, "badge");
+}
+.flaticon-rating:before {
+    content: map-get($flaticon_yogacare-map, "rating");
+}
+.flaticon-trophy:before {
+    content: map-get($flaticon_yogacare-map, "trophy");
+}
+.flaticon-close:before {
+    content: map-get($flaticon_yogacare-map, "close");
+}
+.flaticon-lotus:before {
+    content: map-get($flaticon_yogacare-map, "lotus");
+}
+.flaticon-exercise:before {
+    content: map-get($flaticon_yogacare-map, "exercise");
+}
+.flaticon-placeholder:before {
+    content: map-get($flaticon_yogacare-map, "placeholder");
+}
+.flaticon-yoga-mat:before {
+    content: map-get($flaticon_yogacare-map, "yoga-mat");
+}
+.flaticon-meditation:before {
+    content: map-get($flaticon_yogacare-map, "meditation");
+}
+.flaticon-fitness:before {
+    content: map-get($flaticon_yogacare-map, "fitness");
+}
+.flaticon-play-button:before {
+    content: map-get($flaticon_yogacare-map, "play-button");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon_yogacare-map, "calendar");
+}
+.flaticon-clock-circular-outline:before {
+    content: map-get($flaticon_yogacare-map, "clock-circular-outline");
+}
+.flaticon-pin:before {
+    content: map-get($flaticon_yogacare-map, "pin");
+}

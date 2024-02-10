@@ -1,0 +1,212 @@
+ /* ====================================
+General Styles
+==================================== */
+
+#home-slider{
+	height: calc( 100vh - 80px);
+	width: 100%;
+	position: relative;
+}
+.spilt-slider-wrapper{
+	height: 100%;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	
+	.swiper-wrapper {	
+		position: relative;
+	    width: 100%;
+		height: 100%;
+		z-index: 1;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-transition-property: -webkit-transform;
+		transition-property: -webkit-transform;
+		transition-property: transform;
+		transition-property: transform, -webkit-transform;
+		box-sizing: content-box;
+		
+		.swiper-slide {
+			-webkit-flex-shrink: 0;
+			-ms-flex: 0 0 auto;
+			-ms-flex-negative: 0;
+			flex-shrink: 0;
+			width: 100%;
+			height: 100%;
+		    position: relative;
+			background-color: #fff;
+			overflow: hidden;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			
+			&.swiper-slide-active .swiper-image-left{
+				-webkit-filter: sepia(0%);
+				filter: sepia(0%);
+			}
+			@include respond('phone'){
+				flex-direction: column;
+			}
+			.swiper-image {
+				width: 100%;
+				height: 100%;
+				background-position:center !important;
+				background-size: cover !important;
+				@include respond('phone'){
+					width: 100%;
+					height:75%;
+				}
+				&.swiper-bg{
+					position:relative;
+					z-index:1;
+					::after{
+						background: #525252;
+						top:0;
+						content: "";
+						height: 100%;
+						left: 0;
+						mix-blend-mode: multiply;
+						opacity: 0.2;
+						position: absolute;
+						width: 100%;
+						z-index: 2;
+						@include respond('phone'){
+							height:25%;
+						}
+					}
+				}
+				.swiper-content{
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					justify-content: center;
+					height: 100%;
+					padding: 50px;
+					position: relative;
+					max-width: 600px;
+					margin: auto;
+					
+					.title{
+						font-size:50px;	
+						line-height: 60px;
+						margin-bottom:20px;
+					}
+					p{
+						margin-bottom:35px;
+						font-size: 18px;
+					}
+					
+					@media only screen and (max-width: 1024px){
+						.title {
+							font-size: 45px;
+							line-height: 55px;
+						}
+					}
+					@include respond('tab-port'){
+						padding: 40px;
+						.title {
+							line-height: 40px;
+							font-size: 30px;
+							margin-bottom: 10px;
+						}
+						p{
+							font-size: 16px;
+							margin-bottom: 20px;
+						}
+					}
+					@include respond('phone-land'){
+						.title {
+							font-size: 25px;
+							line-height: 35px;
+						}
+						p{
+							font-size:14px;
+						}
+					}
+					@include respond('phone'){
+						padding: 30px 20px;
+						.title{
+							line-height: 30px;
+							font-size: 24px;
+							margin-bottom: 15px;
+						}
+						p{
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.swiper-container-no-flexbox .swiper-slide {
+		float: left;
+	}
+	.swiper-container-vertical > .swiper-wrapper {
+		-webkit-box-orient: vertical;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.swiper-container-android .swiper-slide, .swiper-wrapper {
+		-webkit-transform: translate3d(0px, 0, 0);
+		transform: translate3d(0px, 0, 0);
+	}
+	.swiper-container-multirow > .swiper-wrapper {
+		-webkit-box-lines: multiple;
+		-moz-box-lines: multiple;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.swiper-container-free-mode > .swiper-wrapper{
+		-webkit-transition-timing-function: ease-out;
+		transition-timing-function: ease-out;
+		margin: 0 auto;
+	}
+	.swiper-pagination {
+		position:fixed;
+		right:0;
+		top:50%;
+		z-index: 99999;
+		transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		
+		span{
+			display: block;
+			font-size: 14px;
+			color: #000;
+			text-align: center;
+			font-weight: 700;
+			opacity: 0.3;
+			padding: 5px 10px;
+			text-shadow: 1px 2px 0px rgba(255,255,255,0.5);
+			
+			&:nth-child(1):after{			
+				content:"01";
+			}
+			&:nth-child(2):after{			
+				content:"02";
+			}
+			&:nth-child(3):after{			
+				content:"03";
+			}
+			&:nth-child(4):after{			
+				content:"04";
+			}
+			&:nth-child(5):after{			
+				content:"05";
+			}
+			&:nth-child(6):after{			
+				content:"06";
+			}
+			&:nth-child(7):after{			
+				content:"07";
+			}
+		}
+	}
+}

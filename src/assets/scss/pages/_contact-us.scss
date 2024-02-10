@@ -1,0 +1,130 @@
+.map-iframe{
+	iframe{
+		width: 100%;
+	}
+	&.style-1{
+		iframe{
+			height:450px;
+			border: 10px solid #fff;
+			box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+			
+			@include respond('tab-port'){
+				height:370px;			
+			}
+			@include respond('phone'){
+				height:320px;
+				border-width: 5px;
+			}
+		}
+	}
+	&.style-2{
+		position: relative;
+		padding: 50px 0;
+		
+		iframe{
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.contact-info{
+			background-color: #fff;
+			padding: 50px;
+			border-radius: 20px;
+			box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+			max-width: 480px;
+			position: relative;
+			z-index: 9;
+			margin-left: 50px;
+		}
+		@include respond('tab-port'){
+			.contact-info{
+				padding: 30px;
+				border-radius: 12px;
+				max-width: 350px;
+				margin-left: 20px;
+			}
+		}
+		@include respond('phone'){
+			padding: 0;
+			
+			.contact-info{
+				border-radius: 12px;
+				max-width: 100%;
+				margin: -50px 20px 0;
+			}
+			iframe{
+				height: 380px;
+				position: static;
+			}
+		}
+	}
+	&.style-3{
+	    height: 100%;
+		iframe{
+			height: 100%;
+		}
+		@include respond('phone-land'){
+			height: 450px;
+		}
+		@include respond('phone'){
+			height: 350px;
+		}
+	}
+}
+
+.contact-box {
+	padding-right: 100px;
+	margin-bottom: 70px;
+	
+	@include respond('phone'){
+		padding-right: 0;
+		margin-bottom: 30px;
+	}
+}
+.widget_working {
+	padding: 30px;
+	background: rgba(255 ,255 ,255 ,0.1);
+	border-radius: 10px;
+	margin-bottom: 0;
+
+	ul{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			width: 50%;
+			color: #fff;
+			display: inline-block;
+			vertical-align: top;
+			span{
+				display:block;
+			}
+		}
+	}
+	@include respond('tab-port'){
+		margin-bottom: 30px !important;
+	}
+	@include respond('phone'){
+		padding: 15px;
+	}
+	&.bg-primary {
+		ul{
+			li{
+				color:var(--theme-text-color);
+				font-weight: 400;
+				font-size: 16px;
+				span{
+					font-size:16px;
+				}
+			}
+		}
+	}
+}
+.contact-area{
+	padding-left: 30px;
+	@include respond('tab-port'){
+		padding-left: 0;
+	}
+}

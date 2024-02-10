@@ -1,0 +1,97 @@
+// ft-clients
+.site-footer {
+	&.style-2{
+		color: #444444;
+		overflow: hidden;
+		position:relative;
+		background-color: var(--bg-light);
+		z-index:1;
+		
+		.footer-top{
+			.footer-title{
+				color: var(--title);
+			}
+			.footer-logo{
+				&.logo-left{
+					width: 215px;
+					height: 78px;
+					display: flex;
+					text-align: center;
+					align-items: center;
+					justify-content: center;
+					margin: -85px 0 30px;
+					background: var(--primary);
+					border-radius: 0 0 20px 20px;
+				}
+			}
+			.widget_services{
+				ul li a{
+					&:before{
+						content:"\f105";
+						font-family:"Font Awesome 6 Free";
+						color:var(--primary);
+					}
+					&:hover{
+						color:var(--primary);
+					}
+				}
+			}
+			.dzSubscribe.dz-subscribe-wrapper1{
+				input {
+					background: #fff;
+					color: #222;
+
+					&::placeholder {
+						color: #222;
+					}
+				}
+
+				.mail-sent {
+					background: var(--primary);
+				}
+			}
+			@include respond('tab-land'){
+				padding-top: 85px;
+				padding-bottom: 0px;
+			}
+		}
+		.footer-bottom{
+			background-color:var(--secondary);
+			.copyright-text{
+				color:#fff;
+				a{
+					color:#fff;
+				}
+			}
+			.footer-link{
+				a{
+					color:#fff;
+					
+					&:hover{
+						color: var(--primary);
+					}
+				}
+			}
+		}
+		&:after{
+			display:none;
+		}
+		@include respond('tab-port') {
+			.widget{
+				text-align: left!important;
+			}
+		}
+	}
+	.footer-bg{
+		position:absolute;
+		right:0;
+		bottom:65px;
+		z-index:-1;
+		@include respond('wide-desktop') {
+			right: -87px;
+		}
+		@include respond('tab-land') {
+			display:none;
+		}
+	}
+}

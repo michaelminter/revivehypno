@@ -1,0 +1,261 @@
+.portfolio-bx{
+	.dz-box{
+		overflow:hidden;
+		border-radius:10px;
+		@include respond('tab-port'){
+			img{
+				width:100%;
+			}		
+		}
+	}
+}
+.dz-box {
+	&.style-1{
+	position:relative;
+    border-radius: 10px;
+    overflow: hidden;
+	
+		.dz-media {
+			img {
+				object-fit: cover;
+				@include transitionMedium;
+				@include respond('laptop'){
+					height: 350px;
+				}
+			}
+			&:before{
+				content:"";
+				position:absolute;
+				opacity:0;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width:100%;
+				height:100%;
+				z-index:1;
+				border-radius: 10px;
+				transform: scale(0.8);
+				@include transitionFast;
+				background: #151F37;
+			}
+		}
+		.dz-info{
+			opacity: 0;
+			position: absolute;
+			text-align: center;
+			margin: auto;
+			top: 0;
+			left: 0px;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			@include transitionMedium;
+			
+			.title{
+				position: absolute;
+				bottom: 20px;
+				left: 20px;
+				margin-bottom: 0;
+			    transform: rotateX(90deg);
+				@include transitionMedium;
+				transform:translateY(20px);
+				opacity:0;
+				a{
+					background-color: #fff;
+					padding: 10px 20px;
+					border-radius: 8px;
+					color: var(--title);
+					display: block;
+				}
+			}
+			.sub-title{
+				background-color: var(--primary);
+				font-size: 13px;
+				font-weight: 500;
+				color: var(--theme-text-color);
+				padding: 6px 14px;
+				position: absolute;
+				left: 20px;
+				top: 20px;
+				border-radius: 8px;
+				display: block;
+				transform: rotateX(90deg);
+				@include transitionMedium;
+				transform:translateY(20px);
+				opacity:0;
+			}
+			.btn-icon{
+				height: 35px;
+				width: 35px;
+				background-color: #fff;
+				border-radius: 50%;
+				transform:translate(-50px, 50px) rotate(-45deg);
+				@include transitionMedium;
+				opacity:0;
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				i{
+					height: 35px;
+					width: 35px;
+					display: block;
+					background-color: #fff;
+					color: var(--title);
+					border-radius: 50%;
+					line-height: 35px;
+					text-align: center;
+					@include transitionMedium;
+					
+				}
+				&:after{
+					content:"";
+					height: 35px;
+					width: 35px;
+					position: absolute;
+					border-radius: 50%;
+					top:0;
+					left:0;
+					background:var(--secondary);
+					z-index:-1;
+					transition:0.3s cubic-bezier(0,1.2,.2,1.5);
+				}
+			}
+		}
+		&:hover{
+			.dz-info{
+				opacity: 1;
+			}
+			.dz-media{
+				img{
+					transform:scale(1.25);
+				}
+				&:before{
+					opacity: 0.3;
+					transform: scale(1);
+				}
+			}
+			
+			.dz-info{
+				.title{
+					transform:translateY(0);
+					opacity:1;
+				}
+				.sub-title{
+					transform:translateY(0);
+					opacity:1;
+				}
+				.btn-icon{
+				    transform:translate(0, 0) rotate(-45deg);
+					opacity:1;
+					&:hover:after{
+						transform:scale(5);
+						
+					}
+				}
+			}
+		}
+	
+	}
+}
+
+
+// single-box-bg.png
+.single-box {
+	padding: 45px;
+	padding-bottom: 25px;
+	z-index: 1;
+	position: relative;
+	
+	.portfolio-foot{
+		&>ul{
+			display: flex;
+			width: 100%;
+			flex-wrap: wrap;
+			&>li{
+				width: 25%;
+				margin-bottom: 20px;
+				h6{
+					color: var(--primary);
+					font-weight: 600;
+					font-size: 15px;
+					
+					@include custommq ($max:1199px){
+						margin-bottom: 5px;
+					}
+				}
+				p{
+					color: $white;
+					font-size: 18px;
+					line-height:30px;
+					@include respond ('tab-land'){
+						font-size: 16px;
+					}
+				}
+				@include custommq ($max:1199px){
+					margin-bottom: 15px;
+				}
+				@include respond ('tab-port'){
+					width: 50%;
+				} 
+				@include respond ('phone'){
+					width: 100%;
+					margin-bottom: 18px;
+					border-bottom: 1px solid rgba(255,255,255,0.1);
+					&:last-child{
+						border-bottom:0;
+					}
+				} 
+			}
+		}
+		
+	}
+	.Support{
+		span {
+			display: block;
+		}
+	}
+	@include respond ('phone'){
+		padding: 30px;
+	} 
+}
+.yoga-content {
+	.title {
+		font-size: 40px;
+		margin-bottom: 20px;
+		@include respond ('tab-port'){
+			font-size: 33px;			
+		}
+		@include respond ('phone'){
+			font-size: 24px;
+			margin-bottom: 10px;
+		} 
+	}
+	.text {
+		font-size: 18px;
+		@media only screen and (max-width: 1024px){
+			font-size: 16px;
+		} 
+	}
+}
+
+.portfolio-slider{
+	.swiper-wrapper{
+	  transition-timing-function: linear;
+	}
+}
+.portfolio-slider:hover{
+	@include transitionMedium;
+	
+	.swiper-slide{
+		.dz-box{
+			opacity: 0.3;
+			@include transitionMedium;
+			
+			&:hover{
+				@include transitionMedium;
+				opacity: 1;
+			}
+		}
+	}
+}

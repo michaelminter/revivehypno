@@ -1,0 +1,142 @@
+.swiper-pagination {
+	position:relative;
+	width: auto;
+	display: flex;
+	align-items: center;
+	
+	&.style-1 {
+		display: inline-block;
+		margin-top:20px;
+		.swiper-pagination-bullet {
+			width: 8px;
+			height: 8px;
+			text-align: center;
+			font-size: 12px;
+			opacity: 1;
+			border-radius:30px;
+			background: grey;
+		}
+
+		.swiper-pagination-bullet-active {
+			background: var(--secondary);
+			width: 38px;
+		}
+	}
+	// team swiper index2.html
+	&.style-2{
+		justify-content: center;	
+		span{
+			width: 8px;
+			height: 8px;
+		}
+		.swiper-pagination-bullet-active{
+			background: var(--primary);
+		}
+	}
+	&.style-3{
+		display: inline-block;
+		margin-top:20px;
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+			text-align: center;
+			font-size: 12px;
+			opacity: 1;
+			border-radius:100px;
+			background: grey;
+		}
+
+		.swiper-pagination-bullet-active {
+			background: var(--secondary);
+		}
+	}
+	
+}
+.num-pagination {
+    display: flex;
+    align-items: center;
+}
+
+.btn-next, 
+.btn-prev{
+	position: static;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 0px;
+    color: #fff;
+    background: var(--primary);
+    font-size: 15px;
+    z-index: 1;
+    text-align: center;
+    margin: 0 10px;
+	display: inline-block;
+	box-shadow: 0px 10px 30px 0px var(--rgba-primary-3);
+	@include transitionMedium;
+	border-radius:10px;
+	&:hover{
+		background:var(--secondary);
+		color:#fff;
+		box-shadow: 0px 10px 30px 0px rgba(34, 34, 34, 0.2);
+	}
+	&:after{
+		content:none;	
+	}
+	&.dark {
+		&:hover{
+			background:#fff;
+			color:#000;
+			box-shadow: 0px 10px 30px 0px rgba(34, 34, 34, 0.2);
+		}
+	}
+	i{
+		font-size: 20px;
+		line-height: inherit;
+	}
+	@include custommq($max: 1199px) {
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		i{
+			font-size: 16px;
+		}
+	}
+	@include respond('phone'){
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		i{
+			font-size: 15px;
+		}
+	}
+}
+
+
+.team-swiper{
+	.swiper-button-next{
+		top: 40%;
+		right: 6px;
+		&:after{
+			content: 'next';
+			font-size: 18px;
+			background: #ff9781;
+			padding: 10px 14px;
+			border-radius: 36px;
+			color: $white;
+		}
+	}
+	.swiper-button-prev{
+		top: 40%;
+		left: 6px;
+		&:after{
+			content: 'prev';
+			font-size: 18px;
+			background: #ff9781;
+			padding: 10px 14px;
+			border-radius: 36px;
+			color: $white;
+		}
+	} 
+}
+
+

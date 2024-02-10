@@ -1,0 +1,82 @@
+.dz-card{
+	&.style-4{
+		background: var(--rgba-primary-2);
+		border-radius: 20px;
+		padding: 25px 25px 25px 65px;
+		position:relative;
+		align-items: center;
+		@media only screen and (max-width: 600px){
+			padding: 25px;
+		}
+		@include respond('phone'){
+			padding: 15px;
+		}
+		.dz-meta{
+			ul li{
+				span{
+					color:#222222;
+				}
+				&.post-date{
+					position:absolute;
+					left: 0;
+					top: 50%;
+					writing-mode: tb;
+					transform:translateY(-50%);
+					background-color:var(--secondary);
+					color:#fff;
+					font-weight: 500;
+					font-size: 18px;
+					text-transform:uppercase;
+					padding: 30px 10px 30px 8px;
+					border-radius: 0px 10px 10px 0px;
+					white-space: pre;
+					@include respond('phone-land'){
+						top: 55px;
+						writing-mode: horizontal-tb;
+						padding: 7px 14px;
+						left: 40px;
+						border-radius: 6px;
+						font-size: 14px;
+					}
+					@include respond('phone'){
+						font-size: 13px;
+						padding:8px 12px;
+					}
+				}
+			}
+		}
+		
+		.dz-info{
+			padding:10px 0;
+			margin-left:30px;
+			position: unset;
+			
+			.dz-title {
+				margin:10px 0;
+			}
+			p {
+			    font-size: 15px;
+				margin-bottom:25px;
+				color: #666666;
+				font-weight:400;
+			}
+			@media only screen and (max-width: 600px){
+				margin-left:0px;
+			}
+			
+		}
+		@include respond('phone-land'){
+			&.blog-half{
+				display: block;
+				
+				.btn-wrapper{
+					padding-top: 0;
+				}
+				.dz-media {
+					max-width: 100%;
+					min-width: 100%;
+				}
+			}
+		}
+	}
+}

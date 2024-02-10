@@ -1,0 +1,67 @@
+// ft-clients
+.site-footer {
+	&.style-3{
+		background-color:#fff;
+		background-blend-mode:unset;
+		.footer-title {
+			color: #222;
+
+		}
+
+		.footer-logo {
+			&.logo-center {
+				background: var(--primary);
+			}
+		}
+
+		.footer-menu {
+			ul {
+				li {
+					a {
+						color: #222;
+						
+						&:hover{
+							color: var(--primary);
+						}
+					}
+				}
+			}
+		}
+		
+		.dzSubscribe.dz-subscribe-wrapper1 {
+			input {
+				background: var(--rgba-primary-1);
+				color: #222;
+
+				&::placeholder {
+					color: #222;
+				}
+			}
+
+			.mail-sent {
+				background: var(--primary);
+			}
+		}
+
+		&:after {
+			display:none;
+		}
+		
+		// footer-bottom 
+		.footer-bottom {
+			border-color:rgba(0, 0, 0, 0.1);
+			.copyright-text {
+				color: rgba(0, 0, 0, 0.5);
+			}
+			.footer-link {
+				a {
+					color: rgba(0, 0, 0, 0.5);
+					
+					&:hover{
+						color: var(--primary);
+					}
+				}
+			}
+		}
+	}
+}

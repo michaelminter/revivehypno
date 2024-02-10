@@ -1,0 +1,692 @@
+.icon-bx-wraper{
+	// Style 1
+	&.style-1{
+		padding: 30px;
+		
+		align-items:center;
+		@include transitionMedium;
+		margin-bottom: 30px;
+		display:flex;
+		border-radius: 8px;
+		background-color: #fff;
+		border:2px solid var(--primary);
+		overflow:hidden;
+		position:relative;
+		z-index:1;
+		box-shadow: 0px 15px 50px rgba(0, 21, 77, 0.1);
+		
+		&:after{
+			content: "";
+			height: 165px;
+			width: 165px;
+			background-color: #fff;
+			@include transitionMedium;
+			position: absolute;
+			right: -36px;
+			top: -10px;
+			z-index: 1;
+			border-radius: 100%;
+			@include respond('tab-port'){
+				right: -52px;
+				top: -22px;
+			}
+			@include respond('phone-land'){
+				right: -25px;
+			}
+			@include respond('phone'){
+				right: -62px;
+			}
+		}
+		&:before{
+			content: "";
+			height: 0;
+			width: 0;
+			background-color: var(--secondary);
+			@include transitionMedium;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			border-radius: 100%;
+		}
+		p{
+		    font-size: 15px;
+		}
+		.icon-bx {
+			height:80px;
+			width: 80px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index:2;
+			position:relative;
+			margin-left: auto;
+			
+			.icon-cell{
+				height:80px;
+				width: 80px;
+			}
+		}
+		.icon-content {
+			overflow: visible;
+			padding-right: 25px;
+		}
+		&:hover,
+		&.active{
+			color:#fff;
+			border-color: var(--secondary);
+			
+			.dz-title,
+			.dz-title a{
+				color:#fff;
+			}
+			&:after{
+				background-color: #fff;
+			}
+			&:before{
+				height: 150px;
+				width: 150px;
+				transform: scale(6);
+			}
+			.icon-bx .icon-cell{
+				animation: swing 0.5s linear;
+			}
+			p{
+				opacity: 0.8;
+			}
+		}
+		
+		@include respond('tab-port'){
+			padding: 20px;
+			.icon-content {
+				padding-right: 10px;
+			}
+		}
+		@include respond('phone-land'){
+			.icon-content {
+				padding-right: 30px;
+			}
+		}
+		@include respond('phone'){
+			padding: 20px;
+			.icon-content {
+				padding-right: 10px;
+			}
+			.icon-bx {
+				.icon-cell{
+					width:65px;
+					height:65px;
+				}
+			}
+		}
+
+	}
+	
+	// Style 2
+	&.style-2{
+		padding: 25px 35px;
+		position: relative;
+		background: var(--primary);
+	    display: flex;
+	    align-items: center;
+		border-radius: 20px;
+	    box-shadow: 0px 10px 50px 0px rgba(0, 35, 55, 0.1);
+		
+		@include respond ('tab-port'){
+			margin-bottom:17px;	
+		}
+		@include respond ('phone'){
+			padding: 15px 25px;
+		}
+		.icon-bx{
+		    margin-right: 15px;
+			
+			.icon-cell{
+				display: block;
+			}
+			i{
+			    font-size: 75px;
+				opacity: 0.3;
+			}
+			@include respond ('tab-land'){
+				i{
+					font-size: 55px;
+				}
+			}
+		}
+		.icon-content{
+			.dz-title{
+				color: var(--theme-text-color);
+				font-weight: 600;
+				font-size: 40px;
+				margin-bottom: 0;
+				
+				@include custommq($max: 1199px){
+					font-size: 36px;
+				}
+				@include respond ('tab-port'){
+					font-size: 34px;
+				}
+				@include respond ('phone'){
+					font-size: 30px;
+				}
+			}
+			p{
+				font-weight: 400;
+				font-size: 18px;
+				color: var(--theme-text-color);
+				opacity: 0.5;
+				
+				@include custommq($max: 1199px){
+					font-size: 14px;
+				}
+			}
+		}
+		&:hover{
+			.icon-bx .icon-cell{
+				animation: swing 0.5s linear;
+			}
+		}
+		@include respond ('phone'){
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+
+	// Style 3
+	&.style-3 {
+		padding: 20px;
+		display:flex;
+		@include transitionMedium;
+		color:#fff;
+		z-index: 1;
+		position: relative;
+		overflow: hidden;
+		.icon-bx{
+			margin-right:20px;
+			.icon-cell {
+				width: 45px;
+				height: 45px;
+				display: inline-block;
+			}
+			@include respond('phone'){
+				margin-right:15px;
+			}
+		}
+		.icon-content {
+			.dz-title,
+			.dz-title a{
+				color:#fff;
+				font-size: 24px;
+				font-weight: 500;
+				line-height: 24px;
+			}
+			p {
+			    color: #fff;
+				font-weight: 400;
+				opacity: 0.4;
+				@include transitionMedium;
+			}
+		}
+		&:hover,
+		&.active{
+			.icon-cell {
+				animation: move-lr 1.2s linear;
+				
+			}
+		}
+		@media only screen and (max-width: 1024px){
+			padding: 15px;
+			.icon-bx{
+				.icon-cell{
+					width: 40px;
+					height: 40px;
+				}
+			}
+			.icon-content{
+				.dz-title,
+				.dz-title a{
+					font-size: 23px;
+				}
+				p{
+					font-size: 15px;
+				}
+			}
+		}
+		@media only screen and (max-width: 600px){
+			.icon-bx{
+				.icon-cell{
+					width: 35px;
+					height: 35px;
+				}
+			}
+			.icon-content{
+				.dz-title,
+				.dz-title a{
+					font-size: 22px;
+				}
+				p{
+					font-size: 14px;
+				}
+			}
+		}
+		@include respond('phone'){
+			.icon-bx{
+				.icon-cell{
+					width: 30px;
+					height: 30px;
+				}
+			}
+			.icon-content{
+				.dz-title,
+				.dz-title a{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	
+	// Style 4
+	&.style-4 {
+		border: 2px solid #ebedf2;
+		position: relative;
+		border-radius: var(--border-radius-base);
+		
+		.icon-bx{
+			width: 80px;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+			margin-left: -40px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			border-radius: 3px;
+			transform: translateY(-50%);
+			.icon-cell {
+				color: #fff;
+				i{
+					font-size: 30px;
+					vertical-align: middle;
+				}
+			}
+		}
+		.border-primary{
+			border:1px solid var(--primary);
+			.icon-cell {
+				color: var(--primary);
+				i{
+					font-size: 30px;
+					vertical-align: middle;
+				}
+			}
+		}
+		.icon-content {
+			.dz-title{
+				font-size: 18px;
+				line-height: 24px;
+				margin-bottom: 10px;
+				}
+			p {
+				font-size: 14px;
+				font-weight: 400;
+				color: #6f6f6f;
+				line-height: 24px;
+				@include transitionMedium;
+			}
+		}
+		&:hover,
+		&.active{
+			
+			.icon-cell {
+				animation: move-lr 1.2s linear;
+				
+			}
+		}
+		@media only screen and (max-width: 1024px){
+			padding: 15px;
+			.icon-bx{
+				width: 70px;
+				height: 70px;
+				line-height: 70px;
+			}
+		}
+	}
+	
+	// Style 5
+	&.style-5 {
+		background: #fff;
+		border-radius: 20px;
+		padding: 40px 30px 35px;
+		transition: all 500ms ease;	
+		border: 2px solid #f6f7f8;
+		box-shadow: 0px 0 50px rgba(0, 0, 0, 0.1);
+		
+		.icon-bx{
+			line-height: 50px;
+			margin-bottom: 20px;
+			position:relative;
+			
+			.icon-cell{
+				color: #141417;
+				i{
+					font-size: 45px;
+					vertical-align: middle;
+					transition: all 500ms ease;
+				}
+				img{
+					width: 60px;
+				}
+			}
+		}
+		.icon-content {
+			.dz-title{
+				transition: all 500ms ease;
+			}
+			p {
+				@include transitionMedium;
+			}
+		}
+		&:hover,
+		&.active{
+			transform: translateY(-10px);
+			border: 2px solid var(--primary);
+			.icon-cell {
+				i{
+					color:var(--primary);
+				}
+			}
+			.icon-content {
+				.dz-title{
+					color:var(--primary);
+				}
+			}
+		}
+		@media only screen and (max-width: 1024px){
+			padding: 20px;
+			.icon-bx{
+				.icon-cell{
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+		@include respond('phone'){
+			.icon-bx{
+				.icon-cell{
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
+	}
+	
+	// Style 6
+	&.style-6 {
+		background: #fff;
+		border-radius: 20px;
+		padding: 45px 25px 40px;
+		transition: all 500ms ease;	
+		box-shadow: 0px 0 50px rgba(0, 0, 0, 0.1);
+		
+		.icon-bx{
+			width: 80px;
+			height: 80px;
+			line-height: 75px;
+			text-align: center;
+			margin-right: auto;
+			margin-left: auto;
+			border-radius: 3px;
+			margin-bottom: 20px;
+			
+			.icon-cell {
+				color: #fff;
+				i{
+					font-size: 35px;
+					vertical-align: middle;
+					transition: all 500ms ease;
+				}
+			}
+		}
+		.icon-content {
+			text-align: center;
+			.dz-title{
+				font-size: 20px;
+				line-height: 24px;
+				transition: all 500ms ease;
+				}
+			p {
+				font-size: 15px;
+				font-weight: 400;
+				color: #6f6f6f;
+				line-height: 26px;
+				@include transitionMedium;
+			}
+		}
+		&:hover,
+		&.active{
+			background: var(--secondary);
+			transform: translateY(-10px);
+			.icon-content {
+				.dz-title{
+					color:#fff;
+				}
+				p{
+					color:#fff;
+				}
+			}
+		}
+	}
+
+	// Style 7
+	&.style-7 {
+		border-radius: 20px;
+		transition: all 500ms ease;	
+		text-align: center;
+		padding: 40px 25px;
+		overflow: hidden;
+		
+		.icon-bx{
+			margin-bottom: 30px;
+			margin-right:auto;
+			margin-left:auto;
+			
+			.icon-cell{
+				i{
+				    font-size: 115px;
+					@include transitionMedium;
+				}
+				img{
+					@include transitionMedium;
+					scale: 1;
+					width:100%;
+					height:100%;
+				}
+			}
+			@include respond('phone'){
+				margin-bottom: 20px;
+				
+				.icon-cell{
+					i{
+						font-size: 95px;
+					}
+				}
+			}
+			
+		}
+		.icon-content {
+			.dz-title{
+				margin-bottom: 15px;
+				transition: all 500ms ease;
+			}
+			p{
+				@include transitionMedium;
+			}
+		}
+		&:hover,
+		&.active{
+			background: #fff;
+			transform: translateY(-10px);
+			box-shadow: 0px 15px 30px rgba(191, 67, 67, 0.1);
+		}
+		
+		// Dark Layout
+		&.dark-wrapper{
+			.icon-content{
+				.dz-title{
+					color: #fff;
+				}
+				p{
+					color: #fff;
+					opacity: 0.4;
+				}
+			}
+			&:after{
+				content: "";
+				background: rgba(255, 255, 255, 0.1);
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				border-radius: 50%;
+				@include transitionMedium;
+				transform: scale(0);
+				height: 100%;
+				width: 100%;
+				z-index: -1;
+			}
+			&:hover,
+			&.active{
+				background-color: transparent;
+				&:after{
+					transform: scale(1.5);
+				}
+			}
+		}
+	}
+
+
+	// Style 8
+	&.style-8{
+		padding: 35px;
+		box-shadow: 0px 0 60px rgba(0, 0, 0, 0.1);
+		transition: all 500ms ease;	
+		border-radius: var(--border-radius-base);
+		@include transitionMedium;
+		overflow: hidden;
+		
+		.effect{
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			transition: width .4s ease-in-out,height .4s ease-in-out;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+		.icon-bx{
+			width: 100px;
+			height: 100px;
+			border: 1px solid var(--primary);
+			text-align: center;
+			border-radius: 50%;
+			line-height: 100px;
+			margin:0 auto 15px;
+			@include transitionMedium;
+			
+			i{
+				@include transitionMedium;
+				font-size: 60px;
+				color: var(--primary);
+			}
+		}
+		.icon-content {
+			p{
+				font-size: 15px;
+			}
+		}
+		&:hover{
+			transform: translateY(-10px);
+			
+			.icon-bx{
+				border: 1px solid rgba(255,255,255,0.8);
+				
+				.icon-cell{
+					animation: swing 0.5s linear;
+				}
+				i{
+					color: #fff;
+				}
+			}
+			.effect{
+				width: 300%;
+				height: 300%;
+			}
+			&:before{
+				height: 150px;
+				width: 150px;
+				transform: scale(5);
+			}
+			.icon-content {
+				p{
+					color: rgba(255,255,255,0.8);
+				}
+			}
+			.dz-title{
+				color: #fff;
+			}
+		}
+		@include custommq($max: 1199px){
+			.icon-bx{
+				width: 80px;
+				height: 80px;
+				line-height: 80px;
+				
+				i{
+					font-size: 40px;
+				}
+			}
+		}
+		@include respond('tab-port'){
+			padding:30px;
+		}
+	}
+}
+
+.pad-m {
+	margin-top: -86px;
+	@include respond('tab-land'){
+		margin-top: 0;
+	}
+}
+
+@keyframes toTopFromBottom {
+	49% {
+		transform: translateY(-100%);
+	}
+	50% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@keyframes left-right {
+	20% {
+		transform: translateX(-5px) rotate(-5deg);
+	}
+	40% {
+		transform: translateX(5px) rotate(5deg);
+	}
+	60% {
+		transform: translateX(-5px) rotate(-5deg);
+	}
+	80% {
+		transform: translateX(5px) rotate(5deg);
+	}
+	100% {
+		transform: translateX(-5px) rotate(-5deg);
+	}
+}

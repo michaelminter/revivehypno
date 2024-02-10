@@ -1,0 +1,481 @@
+// Banner One
+.main-bnr-one{
+	position:relative;
+  	align-items: center;
+	z-index:1;
+	overflow: hidden;
+	
+	.particles-js-canvas-el{
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+	
+	.bubbles-wrap {
+		z-index: 1;
+	}
+	.banner-content{
+		padding-top: 80px;
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+		position: relative;
+		z-index: 2;
+		
+		.title{
+			line-height: 1.2;
+			font-size: 60px;
+			font-weight:600;
+			position: relative;
+			margin-bottom: 20px;
+			
+			@include respond('laptop'){
+				font-size:52px;
+			}
+			@include respond('tab-land'){
+				font-size:42px;
+			}
+			@include respond('tab-port'){
+				font-size:31px;
+				padding-left: 0px;
+				margin-bottom: 15px;
+				
+				&:after {
+					width: 5px;
+				}
+			}
+		}
+		p{
+			font-size:20px;	
+			margin-bottom: 45px;
+			color: #555555;
+			font-style: normal;
+			font-weight: 300;
+			line-height:1.875rem;
+			
+			@include respond('tab-land'){
+				font-size:18px;
+			}
+			@media only screen and (max-width: 1024px){
+				font-size:16px;
+			}
+			@include respond('tab-port'){
+				font-size:14px;
+				margin-bottom: 30px;
+				line-height: 1.6;
+			}
+			@include respond('phone'){
+				margin-bottom:25px;
+			}
+		}
+		.btn {
+			margin-right:30px;
+			@include respond('phone'){
+				margin-right:25px;
+			}
+		}
+		@include respond('tab-port'){
+			padding-top: 0px;
+		}
+		@include respond('phone-land'){
+			padding-bottom: 30px;
+		}
+	}
+	.text-smile{
+		position:relative;
+		span{
+			color:#666666;
+			@media only screen and (max-width: 768px){
+				color:#222222;
+			}
+		}
+		svg{
+			height: 180px;
+			width: 200px;
+			position: absolute;
+			left: -32px;
+			top: -70px;
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			@media only screen and (max-width: 1420px){
+				left: -42px;
+			}
+			@include respond('tab-land'){
+				left: -42px;
+				top: -85px;
+			}
+			@include respond('tab-port'){
+				left: -40px;
+				top: -95px;
+			}
+			@media only screen and (max-width: 768px){
+				display: none;
+			}
+		} 
+	}
+	.banner-media{
+		position: absolute;
+		text-align: center;
+		width: 650px;
+		margin-top: -21px;
+		z-index: 2;
+		background-size:75%;
+		
+		@include respond('wide-desktop'){
+			width: 600px;
+			margin-top: -20px;
+		}
+		@include respond('laptop'){
+			width: 500px;
+		}
+		@include respond('tab-land'){
+			width: 500px;
+			margin-top: 0px;
+			margin-left: 0;
+		}
+		@media only screen and (max-width: 1024px){
+			width:460px;
+			margin-left:-50px;
+		}
+		@include respond('tab-port'){
+			width: 340px;
+			margin-left:10px;
+			position: relative;
+		}
+		
+		@include respond('phone-land'){
+			margin-left: auto;
+			margin-right: auto;
+		}
+			
+		.main-img {
+			width: auto;
+			height: auto;
+			left: 0;
+			@include respond('tab-port'){
+				width:100%;
+			}
+		}
+		.banner-media-shape{
+			left: 50%;
+			width: 70%;
+			top: 50%;
+			position: absolute;
+			transform: translate(-50%, -50%);
+		}
+		
+	}
+	.top-content{
+		margin-bottom: auto;
+		padding-bottom: 30px;
+		@media only screen and (max-width: 1420px){
+			padding-bottom: 0px;
+		}
+		@include respond('tab-port'){
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		.video-bx{
+			.video-btn{
+				span{
+					color:#000;
+					font-weight: 500;
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	.bottom-content{
+		margin-top: 50px;
+		margin-bottom: 0;
+		width: 100%;
+		padding-bottom: 120px;
+		
+		.partner-title{
+			margin-bottom: 30px;
+			position: relative;
+			padding-bottom: 10px;
+			
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				height: 3px;
+				width: 50px;
+				background: var(--secondary);
+			}
+		}
+		@media only screen and (max-width: 1200px)	{
+			padding-bottom:0;
+		}
+		@include respond('tab-port'){
+			display: none;
+		}
+	}
+	.main-btn{
+		position: absolute;
+		top: 50%;
+		z-index: 1;
+		i{
+			height: 90px;
+			width: 90px;
+			text-align: center;
+			line-height: 90px;	
+			background-color: #fff;
+			z-index: 1;
+			color: var(--primary);
+			@include transitionMedium;
+			
+			&:before{
+				display: block;
+				position: absolute;
+				font-size: 24px;
+			}
+		}
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			z-index: -1;
+		}
+		&:before{
+			height: 80px;
+			width: 80px;
+			background-color: var(--rgba-primary-2);
+			top: -10px;
+		}
+		&:after{
+			height: 50px;
+			width: 50px;
+			top: -20px;
+			background-color: var(--rgba-primary-1);
+		}
+		
+		&.main-btn-prev{
+			left: -48px;
+			transform: translateY(-50%) rotate(45deg);
+			&:before{
+				right: -10px;
+			}
+			&:after{
+				right: -20px;
+			}
+			i{
+				&:before{
+					right: 25px;
+					top: -10px;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+		&.main-btn-next{
+			right: -48px;
+			transform: translateY(-50%) rotate(-45deg);
+			&:before{
+				left: -10px;
+			}
+			&:after{
+				left: -20px;
+			}
+			i{
+				&:before{
+					left: 25px;
+					top: -10px;
+					transform: rotate(45deg);
+				}
+			}
+		}
+		@include respond('tab-land'){
+			top: 62%;
+		}
+		@include respond('tab-port'){
+			top: 50%;
+			i{
+				height: 75px;
+				width: 75px;
+				line-height: 75px;	
+				
+				&:before{
+					font-size: 18px;
+				}
+			}
+			&:before{
+				height: 65px;
+				width: 65px;
+			}
+			&:after{
+				height: 35px;
+				width: 35px;
+			}
+			&.main-btn-prev{
+				i{
+					&:before{
+						right: 15px;
+						top: -15px;
+					}
+				}
+			}
+			&.main-btn-next{
+				i{
+					&:before{
+						left: 15px;
+						top: -15px;
+					}
+				}
+			}
+		}
+		&:hover{
+			i{
+				background-color: var(--primary);
+				color: #fff;
+			}
+		}
+	}
+	.main-slider{
+		overflow: unset;
+	}
+	.banner-inner{
+		min-height: 1020px;
+		padding-top: 180px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: flex;
+		background-position: bottom left;
+		background-color:#fff;
+		position: relative;
+		z-index: 1;
+		
+		.row{
+			height: 100%;
+			@include respond('tab-port'){
+				align-items: center;
+			}
+		}
+		&:after {
+			content: attr(data-text);
+			position: absolute;
+			font-weight: 700;
+			font-size: 245px;
+			line-height: 1.3;
+			font-family: var(--font-family-title);
+			z-index: 1;
+			left: 20px;
+			color: #fff;
+			filter: drop-shadow(0px 30px 50px rgba(255, 129, 57, 0.15));
+			opacity: 0.4;
+			bottom:100px;
+		}
+		@include respond('wide-desktop'){
+			min-height: 820px;
+			padding-top: 120px;
+			
+			&:after {
+				font-size: 150px;
+				bottom: 150px;
+			}
+		}
+		@include respond('tab-land'){
+			min-height: 800px;
+		}
+		@include respond('tab-port'){
+			min-height: 600px;
+			padding-top: 100px;
+			padding-bottom: 50px;
+			
+			&:after {
+				font-size: 80px;
+				bottom: 50px;
+			}
+		}
+		@include respond('phone-land'){
+			padding-bottom: 0;
+		}
+		@media only screen and (max-width: 600px){
+			padding-top: 155px;
+		}
+		@include respond('phone'){
+			padding-top: 125px;
+		}
+	}
+	
+	.banner-inner{
+		.bnr-bg1,
+		.bnr-bg2,
+		.bnr-bg3{
+			position:absolute;
+		}
+		.bnr-bg1{
+			top:0;
+			right:-30px;
+			width: 25vw;
+		}
+		.bnr-bg2{
+			left:-72px;
+			bottom:0;
+			width: 15vw;
+			transform: skewX(-12deg);
+		}
+		.bnr-bg3 {
+			transform: rotate(18.35deg);
+			top: 23%;
+			left: 80px;
+			width: 5vw;
+		}
+		@include respond('phone-land'){
+			.bnr-bg1{
+				width: 35vw;
+			}
+			.bnr-bg3{
+				top: 12%;
+			}
+		}
+		@include respond('phone'){
+			.bnr-bg1{
+				width: 50vw;
+			}
+			.bnr-bg2{
+				width: 35vw;
+			}
+			.bnr-bg3{
+				top: 11%;
+				width: 7vw;
+			}
+		}
+	}
+}
+
+.slideskew {
+    animation: 5s ease 0s normal none infinite running slideskew;
+}
+
+@keyframes slideskew {
+	0% {
+		transform:translateY(0px);
+		opacity: 1; 
+	}
+	50% {
+		transform:translateY(20px); 
+		-moz-transform:translateY(20px); 
+		-webkit-transform:translateY(20px); 
+		-ms-transform:translateY(20px); 
+		-o-transform:translateY(20px); 
+	} 
+	100% {
+		transform:translateY(0); 
+		-moz-transform:translateY(0); 
+		-webkit-transform:translateY(0); 
+		-ms-transform:translateY(0); 
+		-o-transform:translateY(0); 
+	} 
+}
+.bnr-bg1 path{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	transition:all 4s;
+}
+.bnr-bg1.wow.animated path{
+	stroke-dashoffset:  1000;
+}

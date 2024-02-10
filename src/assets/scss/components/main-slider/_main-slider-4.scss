@@ -1,0 +1,725 @@
+// Banner four
+.main-bnr-four{
+	position: relative;
+	align-items: center;
+	z-index: 1;
+	overflow: hidden;
+	
+	.bnr-circle {
+		background: var(--rgba-primary-5);
+		border-radius: 50%;
+		position: absolute;
+		width: 177px;
+		height: 177px;
+		z-index: 2;
+		filter: blur(100.5px);
+	}
+	.bnr-circle1 {
+		top: -2rem;
+		left: -2rem;
+	}
+	.bnr-circle2{
+		top: -5rem;
+		right: -5rem;
+		filter: blur(180.5px);
+	}
+
+	// date line 
+	.bnr-left-fix-content {
+		font-weight: 500;
+		font-size: 18px;
+		color: var(--primary);
+		transform: rotate(-90deg);
+		position: absolute;
+		top: 40%;
+		left: -5rem;
+		z-index: 10;
+
+		@include respond('tab-land') {
+			display: none;
+		}
+	}
+
+	// Banner inner 
+	.banner-inner {
+		min-height: 900px;
+		padding-top: 180px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: flex;
+		background-position: bottom left;
+		
+		.data-text{
+			color: #fff;
+			opacity: 0.8;
+			right: 20px;
+			z-index:-1;
+			display: flex;
+			bottom: -230px;
+			font-size: 675px;
+			font-weight: 400;
+			line-height: 1.2;
+			position: absolute;
+			font-family: 'Bebas Neue';
+			-webkit-text-fill-color: transparent;
+			background: linear-gradient(180deg, rgba(212, 104, 104, 0) 0%, var(--rgba-primary-2) 75.06%);
+			filter: drop-shadow(0px 30px 50px var(--rgba-primary-1));
+			-webkit-background-clip: text;
+			
+			@include respond('wide-desktop') {
+				font-size: 550px;
+				bottom: -192px;
+			}
+			@include respond('tab-land') {
+				font-size: 450px;
+				bottom: -156px;
+			}
+			@include respond('tab-port') {
+				font-size: 338px;
+				bottom: -118px;
+			}
+			@include respond('phone-land'){
+				font-size: 250px;
+				bottom: -90px;
+			}
+			@include respond('phone') {
+				font-size: 150px;
+				bottom: -70px;
+			}
+		}
+		.row {
+			height: 100%;
+			@include respond('tab-port') {
+				align-items: center;
+			}
+		}
+
+		@include respond('wide-desktop') {
+			min-height: 800px;
+			padding-top: 150px;
+		}
+		@include respond('laptop') {
+			min-height: 620px;
+			padding-top: 100px;
+		}
+		@include respond('tab-port') {
+			min-height: 600px;
+			padding-bottom: 50px;
+		}
+		@include respond('phone-land') {
+			padding-bottom: 0;
+			background-position: center;
+			padding-top: 155px;
+		}
+		@include respond('phone') {
+			padding-top: 125px;
+		}
+	}
+
+	.banner-content {
+		padding-top: 100px;
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+		position: relative;
+		z-index: 2;
+
+		.title {
+			line-height: 1.2;
+			font-size: 70px;
+			font-weight: 600;
+			position: relative;
+			margin-bottom: 20px;
+
+			@include respond('laptop') {
+				font-size: 52px;
+			}
+
+			@include respond('tab-land') {
+				font-size: 42px;
+			}
+
+			@include respond('tab-port') {
+				font-size: 31px;
+				padding-left: 0px;
+				margin-bottom: 15px;
+
+				&:after {
+					width: 5px;
+				}
+			}
+		}
+		h4 {
+			color: var(--primary) !important;
+			font-weight: 500;
+			font-size: 24px;
+
+			@include respond('tab-port') {
+				font-size: 1.2rem;
+			}
+		}
+		h3{
+			margin-top: 2rem;
+			font-size: 28px;
+			font-weight: 400;
+			color: #282828;
+
+			@include respond('tab-land') {
+				font-size: 22px;
+				margin-top: 1rem;
+			}
+
+			@include respond('phone-land') {
+				font-size: 1rem;
+			}
+
+			@include respond('tab-port'){
+				font-size: 18px;
+			}
+
+		}
+
+		p{
+			font-size: 18px;
+			margin-bottom: 45px;
+			color: #666666;
+			font-style: normal;
+			font-weight: 400;
+
+			@include respond('tab-land') {
+				font-size: 14px;
+			}
+			@include respond('phone') {
+				margin-bottom: 30px;
+			}
+		}
+		@include respond('tab-port') {
+			padding-top: 0px;
+		}
+		.top-content {
+			margin-bottom: auto;
+			padding-bottom: 30px;
+		
+			.title-box {
+				width: 100%;
+				position: relative;
+				padding-left: 1.5rem;
+		
+				&::before {
+					content: "";
+					background-color: var(--primary);
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					height: 100%;
+					z-index: 1;
+					width: 6px;
+				}
+			}
+			@include respond('laptop') {
+				padding-bottom: 0px;
+			}
+			@include respond('tab-port') {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	.banner-inner{
+		.bnr-bg1,
+		.bnr-bg2{
+			position: absolute;
+			z-index: 1;
+		}
+		.bnr-bg1{
+			right: 0;
+			width: 10vw;
+			top: 0;
+
+			@include respond('tab-port') {
+				display: none;
+			}
+		}
+		.bnr-bg2{
+			left: -3rem;
+			transform: skew(0);
+			width: 12vw;
+			bottom: -5px;
+		}
+	}
+	@include respond('laptop') {
+		padding-bottom: 120px;
+	}
+	@include respond('tab-land') {
+		padding-bottom: 0;
+	}
+	
+	// Point List Styling
+	.point-list {
+		li {
+			position: absolute;
+
+			i {
+				height: 50px;
+				width: 50px;
+				font-size: 20px;
+				border-radius: 50px;
+				line-height: 50px;
+				text-align: center;
+				cursor: pointer;
+				z-index: 1;
+				position: relative;
+				@include transitionMedium;
+				background: var(--primary);
+				color: var(--theme-text-color);
+
+				@include respond('tab-land') {
+					height: 35px;
+					width: 35px;
+					font-size: 12px;
+					line-height: 35px;
+				}
+			}
+
+			&.show {
+				i {
+					background-color: #000;
+					color: #fff;
+
+					&:before {
+						content: "\f068";
+					}
+				}
+			}
+
+			&:after,
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: 0;
+				height: 100%;
+				border-radius: 100%;
+				display: block;
+				border: 1px solid var(--primary);
+			}
+
+			&:after {
+				animation: fadeup 2.5s ease infinite;
+			}
+
+			&:before {
+				animation: fadeup2 2.5s ease infinite;
+			}
+
+			span {
+				position: absolute;
+				padding: 16px 27px;
+				background: white;
+				white-space: nowrap;
+				line-height: 1.2;
+				box-shadow: 0px 15px 30px rgba(112, 14, 14, 0.2);
+				font-size: 18px;
+				color: black;
+				@include transitionMedium;
+
+				@include respond('tab-land') {
+					font-size: 16px;
+				}
+
+				@include respond('tab-port') {
+					font-size: 14px;
+					padding: 14px 20px;
+				}
+			}
+		}
+
+		@include respond('phone') {
+			display: none;
+		}
+	}
+
+	.banner-media {
+		position: relative;
+		text-align: center;
+		width: 1177px;
+		height: 850px;
+		margin-top: -80px;
+		margin-left: -14rem;
+
+		.point-list {
+			li {
+				&:nth-child(1) {
+					top: 11%;
+					left: 37%;
+
+					span {
+						top: 0;
+						left: 100%;
+						transform: translateY(-100%) scale(0);
+						border-radius: 0px 10px 10px 0px;
+						transform-origin: left bottom;
+					}
+
+					&.show {
+						span {
+							transform: translateY(-100%) scale(1);
+						}
+					}
+				}
+
+				&:nth-child(2) {
+					top: 70%;
+					left: 22%;
+
+					span {
+						transform: translate(-100%, -100%) scale(0);
+						bottom: 0;
+						left: 0;
+						border-radius: 0px 10px 0px 10px;
+						transform-origin: right bottom;
+					}
+
+					&.show {
+						span {
+							transform: translate(-100%, -100%) scale(1);
+						}
+					}
+				}
+
+				&:nth-child(3) {
+					top: 72%;
+					left: 75%;
+
+					span {
+						top: 0;
+						left: 100%;
+						transform: translateY(-100%) scale(0);
+						border-radius: 0px 10px 10px 0px;
+						transform-origin: left bottom;
+
+						@include respond('tab-land') {
+							left: auto;
+							right: 100%;
+							transform-origin: right bottom;
+							border-radius: 10px 10px 0px 10px;
+						}
+					}
+
+					&.show {
+						span {
+							transform: translateY(-100%) scale(1);
+						}
+					}
+
+				}
+			}
+		}
+
+		// media query for banne media side 
+		@include respond('wide-desktop') {
+			width: 900px;
+			height: 620px;
+			margin-top: 0px;
+			margin-left: -7rem;
+
+			.point-list li {
+				&:nth-child(1){
+					left: 33%;
+				}
+				&:nth-child(2),
+				&:nth-child(3) {
+					top: 65%;
+				}
+			}
+		}
+
+		@include respond('phone-land') {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: -50px;
+		}
+
+		@include respond('tab-land') {
+			width: 750px;
+			background-position: bottom;
+			margin-left: -10rem;
+			height: 530px;
+			margin-top: 0;
+
+			.point-list li {
+
+				&:nth-child(2),
+				&:nth-child(3) {
+					top: 72%;
+				}
+			}
+		}
+
+		@include respond('tab-port') {
+		    width: 650px;
+			margin-left: -11rem;
+			height: 450px;
+		}
+
+		@include respond('phone-land') {
+		    margin-left: 0;
+			width: 100%;
+			height: 100%;
+			.point-list li{
+				&:nth-child(2),
+				&:nth-child(3) {
+					top: 62%;
+				}
+			}
+		}
+
+		@include respond('phone') {
+			margin: 0;
+			width: 100%;
+		}
+	}
+	
+	.main-btn {
+		position: absolute;
+		top: 50%;
+		z-index: 1;
+
+		i {
+			height: 90px;
+			width: 90px;
+			text-align: center;
+			line-height: 90px;
+			background-color: #fff;
+			z-index: 1;
+			color: var(--primary);
+			@include transitionMedium;
+
+			&:before {
+				display: block;
+				position: absolute;
+				font-size: 24px;
+			}
+		}
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+		}
+
+		&:before {
+			height: 80px;
+			width: 80px;
+			background-color: var(--rgba-primary-2);
+			top: -10px;
+		}
+
+		&:after {
+			height: 50px;
+			width: 50px;
+			top: -20px;
+			background-color: var(--rgba-primary-1);
+		}
+
+		&.main-btn-prev {
+			left: -48px;
+			transform: translateY(-50%) rotate(45deg);
+
+			&:before {
+				right: -10px;
+			}
+
+			&:after {
+				right: -20px;
+			}
+
+			i {
+				&:before {
+					right: 25px;
+					top: -10px;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+
+		&.main-btn-next {
+			right: -48px;
+			transform: translateY(-50%) rotate(-45deg);
+
+			&:before {
+				left: -10px;
+			}
+
+			&:after {
+				left: -20px;
+			}
+
+			i {
+				&:before {
+					left: 25px;
+					top: -10px;
+					transform: rotate(45deg);
+				}
+			}
+		}
+
+		@include respond('tab-land') {
+			top: 62%;
+		}
+
+		@include respond('tab-port') {
+			top: 50%;
+
+			i {
+				height: 75px;
+				width: 75px;
+				line-height: 75px;
+
+				&:before {
+					font-size: 18px;
+				}
+			}
+
+			&:before {
+				height: 65px;
+				width: 65px;
+			}
+
+			&:after {
+				height: 35px;
+				width: 35px;
+			}
+
+			&.main-btn-prev {
+				i {
+					&:before {
+						right: 15px;
+						top: -15px;
+					}
+				}
+			}
+
+			&.main-btn-next {
+				i {
+					&:before {
+						left: 15px;
+						top: -15px;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			i {
+				background-color: var(--primary);
+				color: #fff;
+			}
+		}
+	}
+
+	.main-slider {
+		overflow: unset;
+	}
+
+
+	// PAGINATION SET WORK START FROM HERE
+	.num-pagination {
+		display: table;
+		position: absolute;
+		top: 50%;
+		right: 28px;
+		transform: translateY(-50%);
+		z-index: 1;
+		.swiper-pagination {
+			display: block;
+			font-size: 18px;
+			width: auto;
+		}
+		.swiper-pagination .swiper-pagination-bullet {
+			display: block;
+			margin: 25px 0;
+			color: var(--theme3-secondary2);
+		}
+
+		.swiper-pagination.style-1 .swiper-pagination-bullet {
+			height: auto;
+			opacity: 1;
+			width: auto;
+			-webkit-transition: all 0.5s;
+			-ms-transition: all 0.5s;
+			transition: all 0.5s;
+			border-radius: 0%;
+			margin: 1.8rem 15px;
+			font-size: 1.25rem;
+			background-color: transparent;
+
+			@include respond('tab-port') {
+				font-size: 0.9rem;
+				margin: 0.8rem 0;
+			}
+
+			&.swiper-pagination-bullet-active {
+				color: var(--primary);
+				transform: scale(1.7);
+				font-weight: 600;
+			}
+		}
+
+		@include respond('phone') {
+			display: none;
+		}
+	}
+
+	// Main bnr 2 responsive code
+	@include respond('laptop') {
+		padding-bottom: 0;
+
+		.bnr-bg2 {
+			bottom: 0;
+		}
+		background-size: 60%;
+	}
+
+	@include respond('phone-land'){
+		background-position: bottom center;
+		background-size: 100%;
+	}
+
+}
+// Fade up animation
+.fadeup{
+	animation: fadeup 2.5s ease infinite;
+}
+
+.fadeup2 {
+	animation: fadeup2 2.5s ease infinite;
+}
+@keyframes fadeup {
+	0% {
+		opacity: 0.8;
+		transform: scale(0.9);
+	}
+
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes fadeup2 {
+	0% {
+		opacity: 0.8;
+		transform: scale(0.9);
+	}
+
+	100% {
+		transform: scale(3);
+		opacity: 0;
+	}
+}

@@ -1,0 +1,121 @@
+// ft-clients
+.site-footer {
+	color: #444444;
+	background-position: center;
+	overflow: hidden;
+	background-color: #151F37;
+	background-blend-mode: luminosity;
+
+	.footer-title {
+		display: inline-block;
+		color: #fff;
+
+	}
+
+	.footer-logo {
+		&.logo-center {
+			background: var(--secondary);
+			width: 140px;
+			height: 150px;
+			border-radius: 0 0 20px 20px;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: -90px auto 0;
+			padding: 20px;
+		}
+	}
+
+	.footer-menu {
+		ul {
+			text-align: center;
+			margin: 0 -15px;
+			@include transitionMedium;
+			
+			li {
+				padding: 0 15px;
+				display: inline-block;
+				@include transitionMedium;
+
+				a {
+					color: #fff;
+					font-size: 16px;
+					font-weight: 400;
+					
+					&:hover{
+						color: var(--primary);
+					}
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		position: relative;
+		z-index: 1;
+
+		.copyright-text {
+			color: rgba(255, 255, 255, 0.5);
+			font-size: 14px;
+			font-weight: 400;
+			a {
+				color: var(--primary);
+			}
+		}
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--dark);
+		opacity: 0.8;
+	}
+
+	@include respond('tab-port') {
+		.footer-menu {
+			margin-bottom: 30px;
+			ul {
+				margin: 0 -10px;
+				
+				li {
+					padding: 4px 10px;
+				}
+			}
+		}
+		.footer-logo {
+			&.logo-center {
+				margin: -90px auto 40px;
+			}
+		}
+		.widget {
+			text-align: center !important;
+		}
+	}
+	@include respond('phone-land'){
+		.footer-logo{
+			&.logo-center {
+				margin: -60px auto 40px;
+			}
+		}
+	}
+	@include respond('phone'){
+		.footer-bottom {
+			.footer-link {
+				margin: 0px -5px;
+				
+				li {
+					padding: 0px 5px;
+
+					a {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}

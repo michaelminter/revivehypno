@@ -1,0 +1,44 @@
+// site-header
+.site-header{
+	&.box-header{
+		
+		.extra-nav,
+		.logo-header{
+			height: 82px;
+		}
+		@include respond('phone'){
+			.logo-header,
+			.extra-nav{
+				height: 70px;
+			}
+			.navbar-toggler{
+				margin: 14px 0 14px 15px;
+			}
+		}
+
+		@include respond('tab-port-min'){
+			.header-nav .nav > li > a {
+				padding: 30px 15px;
+				line-height: 1.2;
+			}
+		}
+		.sticky-header:not(.is-fixed){
+			.main-bar{
+				padding:15px 0;
+				box-shadow: none;
+				background-color: transparent;
+				
+				@include respond('phone'){
+					padding: 10px;
+				}
+			}
+			.main-bar-bx{
+				padding: 0 15px;
+				border-radius: 10px;
+				@include transitionMedium;
+				background-color: #FFF;
+				box-shadow: 0px 20px 40px 0px rgba(8, 91, 75, 0.10);
+			}
+		}
+	}
+}

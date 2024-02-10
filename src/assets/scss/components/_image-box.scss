@@ -1,0 +1,153 @@
+//Image box wrapper
+.image-box-wrapper {
+
+
+	// Style-1
+	&.style-1 {
+		align-items: center;
+		@include transitionSlow;
+		display: flex;
+		border-radius: 8px;
+		background-color: var(--bg-light);
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+
+		&:after {
+			content: "";
+			height: 258px;
+			width: 263px;
+			border: 25px solid var(--primary);
+			@include transitionSlow;
+			position: absolute;
+			right: -102px;
+			top: -84px;
+			z-index: 1;
+			border-radius: 100%;
+			transition: 0.4s;
+			background-color: var(--bg-light);
+			
+			@media only screen and (max-width: 991px) and (min-width: 767px){
+				right: -52px;
+				top: -22px;
+			}
+			@include respond('phone') {
+				top: -125px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		
+		&:before{
+			content: "";
+			height: 0;
+			width: 0;
+			background-color: var(--primary);
+			@include transitionSlow;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: -1;
+			border-radius: 100%;
+		}
+		.dz-media {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 20;
+			position: relative;
+			overflow: visible;
+			min-width: 165px;
+			width: 165px;
+			height: 165px;
+		    padding: 10px;
+		}
+		.dz-content {
+			overflow: visible;
+			padding: 20px;
+			width: 100%;
+			margin-right: -20px;
+			z-index: 3;
+			position: relative;
+
+			.dz-title{
+				@include respond('phone-land'){
+					font-size: 1.5rem;
+				}
+				@include respond('phone'){
+					font-size: 1.4rem;
+				}
+			}
+
+			p{
+				margin-bottom: 0.6rem;
+				font-size: 14px;
+			
+				@include respond('phone'){
+					font-size: 14px;
+				}
+			}
+		}
+		&:hover,
+		&.active {
+			color: #fff;
+			
+			.dz-title,
+			.dz-title a {
+				color: #fff;
+			}
+
+			&:after {
+				background-color: #fff;
+			}
+			&:before{
+				height: 200px;
+				width: 200px;
+				transform: scale(10);
+			}
+			.dz-content{
+				.btn-underline{
+					color: #fff;
+					border-color: #fff;
+				}
+			}
+		}
+		@media only screen and (max-width: 991px) and (min-width: 767px){
+			flex-direction: column;
+			padding: 20px;
+			
+			.dz-content{
+				order: 2;
+				padding: 10px;
+			}
+			.dz-media {
+				order: 1;
+				text-align: center;
+			}
+			&::after {
+				width: 100%;
+				height: 100%;
+				top: -12rem;
+				right: 0;
+
+			}
+		}
+		@include respond('phone') {
+			padding: 30px;
+			flex-direction: column;
+			
+			.dz-content {
+				padding: 0px;
+				order: 2;
+				margin-right: 0;
+			}
+			.dz-media {
+				min-width: 200px;
+				width: 200px;
+				height: 200px;
+				padding: 0 0 15px;
+				margin-top: -15px;
+			}
+		}
+	}
+}

@@ -1,0 +1,86 @@
+// Error Page
+.under-construction{
+    padding: 0 90px; 
+    display: flex;
+    vertical-align: middle;
+    position: relative;
+	height:100vh;
+	align-items: center;
+	justify-content:center;
+	
+	p{
+		font-size:50px;
+		font-weight: 300;
+		font-family: 'Poppins';
+		letter-spacing: 3px;
+	}
+	.dz-head{
+		margin-bottom: 15px;
+		line-height:1.1;
+		font-size: 95px;
+		font-family: 'Poppins';
+		font-weight: 700;
+	}
+	@include respond('tab-land'){
+		
+		.dz-head{
+			font-size: 80px;
+		}		
+		p{
+			font-size: 35px;
+		}
+		
+	}
+	@media only screen and (max-width: 1024px){
+		padding:0 65px;
+		.dz-head{
+			font-size: 65px;
+		}		
+		p{
+			font-size: 30px;
+		}
+	}
+	@media only screen and (max-width: 768px){
+		padding: 0 30px; 
+		.dz-head {
+			font-size: 50px;
+		}
+		p{
+			font-size: 24px;
+		}
+	}
+	@media only screen and (max-width: 600px){
+		display:block;
+		padding:80px 45px 0;
+		.dz-head{
+			font-size: 65px;
+		}		
+		p{
+			font-size: 30px;
+		}
+	}
+	@include respond('phone'){
+		padding:100px 30px;
+		.dz-head {
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+		p{
+			font-size: 22px;
+		}
+	}
+	.construction-media{
+		@include respond('tab-land'){
+			transform: scale(1.2) translateX(8%);
+		}
+		@media only screen and (max-width: 1200px){
+			transform: scale(1.3) translateX(8%);
+		}
+		@media only screen and (max-width: 600px){
+			transform: scale(1.2) translateX(0) translateY(-17%);
+		}
+		@include respond('phone'){
+			transform:scale(1.4) translateX(0) translateY(-15%);
+		}
+	}
+}
